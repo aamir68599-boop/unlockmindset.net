@@ -420,11 +420,14 @@
             flex-direction: column;
             gap: 14px;
             margin-top: 6px;
+            align-items: center;
+            width: 100%;
         }
 
         .hero-actions .btn-primary {
-            align-self: flex-start;
+            align-self: center;
             white-space: nowrap;
+            min-width: auto;
         }
 
         .hero-note {
@@ -432,6 +435,7 @@
             color: var(--muted);
             opacity: 0.7;
             letter-spacing: 0.02em;
+            text-align: center;
         }
 
         /* Hero visual */
@@ -746,6 +750,7 @@
             border-radius: 16px;
             border-left: 3px solid var(--gold);
             transition: var(--transition);
+            text-align: center;
         }
 
         .discovery-result p {
@@ -1162,8 +1167,17 @@
                 gap: 24px;
             }
             .hero-actions {
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
+                gap: 10px;
+                width: 100%;
+            }
+            .hero-actions .btn-primary {
+                align-self: center;
+                white-space: nowrap;
+            }
+            .hero-actions .hero-note {
+                text-align: center;
             }
             .preview-card {
                 padding: 50px 40px;
@@ -1173,6 +1187,9 @@
             }
             .discovery-section {
                 padding: 50px 40px;
+            }
+            .discovery-result {
+                text-align: center;
             }
             .timeline {
                 gap: 32px;
@@ -1196,6 +1213,12 @@
             }
             .hero-visual {
                 min-height: 340px;
+            }
+            .hero-actions {
+                align-items: center;
+            }
+            .hero-actions .btn-primary {
+                align-self: center;
             }
             .section {
                 padding: 80px 0;
@@ -1243,6 +1266,10 @@
             .hero-visual {
                 min-height: 400px;
             }
+            .hero-actions .btn-primary {
+                font-size: 1rem;
+                padding: 14px 32px;
+            }
             .problem-grid {
                 gap: 30px;
             }
@@ -1275,6 +1302,10 @@
             .hero-grid {
                 gap: 80px;
             }
+            .hero-actions .btn-primary {
+                font-size: 1.05rem;
+                padding: 16px 36px;
+            }
         }
 
         /* ===== RESPONSIVE: HERO BUTTON FIX ===== */
@@ -1289,6 +1320,7 @@
                 min-width: 0;
                 width: 100%;
                 justify-content: center;
+                align-self: center;
             }
             .hero-actions .btn-primary .arrow {
                 flex-shrink: 0;
@@ -1389,6 +1421,10 @@
                 white-space: normal;
                 padding: 12px 22px;
                 font-size: 0.95rem;
+                align-self: center;
+            }
+            .hero-actions {
+                align-items: center;
             }
         }
 
@@ -1409,6 +1445,10 @@
             }
             .section {
                 padding: 120px 0;
+            }
+            .hero-actions .btn-primary {
+                font-size: 1.15rem;
+                padding: 18px 44px;
             }
         }
 
