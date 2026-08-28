@@ -376,14 +376,19 @@
 
         .hero-grid {
             display: grid;
+            grid-template-columns: 1fr;
             gap: 40px;
-            align-items: center;
+            justify-items: center;
+            text-align: center;
         }
 
         .hero-content {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            align-items: center;
+            max-width: 760px;
+            margin: 0 auto;
         }
 
         .hero-eyebrow {
@@ -411,7 +416,7 @@
         .hero p {
             font-size: 1.05rem;
             color: var(--muted);
-            max-width: 560px;
+            max-width: 600px;
             line-height: 1.7;
         }
 
@@ -436,143 +441,6 @@
             opacity: 0.7;
             letter-spacing: 0.02em;
             text-align: center;
-        }
-
-        /* Hero visual */
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            min-height: 280px;
-        }
-
-        .hero-glow {
-            position: relative;
-            width: 100%;
-            max-width: 420px;
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-glow::before {
-            content: '';
-            position: absolute;
-            width: 80%;
-            height: 80%;
-            background: radial-gradient(circle at center, rgba(212, 175, 106, 0.15), transparent 70%);
-            border-radius: 50%;
-            animation: glowPulse 4s ease-in-out infinite alternate;
-        }
-
-        .hero-glow::after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 60%;
-            background: radial-gradient(circle at center, rgba(212, 175, 106, 0.07), transparent 70%);
-            border-radius: 50%;
-            animation: glowPulse 5s ease-in-out infinite alternate-reverse;
-        }
-
-        @keyframes glowPulse {
-            0% {
-                transform: scale(0.9);
-                opacity: 0.6;
-            }
-            100% {
-                transform: scale(1.1);
-                opacity: 1;
-            }
-        }
-
-        .hero-silhouette {
-            position: relative;
-            z-index: 2;
-            width: 60%;
-            height: 60%;
-            background: radial-gradient(ellipse at 40% 30%, rgba(212, 175, 106, 0.12), transparent 70%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-silhouette svg {
-            width: 80%;
-            height: 80%;
-            opacity: 0.25;
-            fill: none;
-            stroke: var(--gold);
-            stroke-width: 0.6;
-            filter: drop-shadow(0 0 30px rgba(212, 175, 106, 0.08));
-        }
-
-        .hero-particles {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .hero-particles span {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--gold);
-            border-radius: 50%;
-            opacity: 0.15;
-            animation: floatParticle 8s infinite alternate ease-in-out;
-        }
-
-        .hero-particles span:nth-child(1) {
-            top: 15%;
-            left: 10%;
-            animation-delay: 0s;
-            width: 6px;
-            height: 6px;
-        }
-        .hero-particles span:nth-child(2) {
-            top: 70%;
-            left: 80%;
-            animation-delay: 1.2s;
-            width: 3px;
-            height: 3px;
-        }
-        .hero-particles span:nth-child(3) {
-            top: 30%;
-            right: 12%;
-            animation-delay: 2.5s;
-            width: 5px;
-            height: 5px;
-        }
-        .hero-particles span:nth-child(4) {
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 0.8s;
-            width: 4px;
-            height: 4px;
-        }
-        .hero-particles span:nth-child(5) {
-            top: 55%;
-            left: 70%;
-            animation-delay: 3.2s;
-            width: 7px;
-            height: 7px;
-        }
-
-        @keyframes floatParticle {
-            0% {
-                transform: translate(0, 0) scale(1);
-                opacity: 0.08;
-            }
-            100% {
-                transform: translate(20px, -30px) scale(1.4);
-                opacity: 0.25;
-            }
         }
 
         /* ===== TRUST STRIP ===== */
@@ -1208,17 +1076,7 @@
                 padding: 70px 0 80px;
             }
             .hero-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 50px;
-            }
-            .hero-visual {
-                min-height: 340px;
-            }
-            .hero-actions {
-                align-items: center;
-            }
-            .hero-actions .btn-primary {
-                align-self: center;
+                gap: 40px;
             }
             .section {
                 padding: 80px 0;
@@ -1257,14 +1115,8 @@
             .hero {
                 padding: 90px 0 100px;
             }
-            .hero-grid {
-                gap: 70px;
-            }
             .hero h1 {
                 font-size: 4rem;
-            }
-            .hero-visual {
-                min-height: 400px;
             }
             .hero-actions .btn-primary {
                 font-size: 1rem;
@@ -1298,9 +1150,6 @@
             }
             .hero h1 {
                 font-size: 4.4rem;
-            }
-            .hero-grid {
-                gap: 80px;
             }
             .hero-actions .btn-primary {
                 font-size: 1.05rem;
@@ -1437,12 +1286,6 @@
             .hero h1 {
                 font-size: 5rem;
             }
-            .hero-grid {
-                gap: 100px;
-            }
-            .hero-visual {
-                min-height: 480px;
-            }
             .section {
                 padding: 120px 0;
             }
@@ -1460,13 +1303,6 @@
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
-            }
-            .hero-glow::before,
-            .hero-glow::after {
-                animation: none;
-            }
-            .hero-particles span {
-                animation: none;
             }
         }
 
@@ -1573,24 +1409,6 @@
                     Watch the Free Presentation <span class="arrow">→</span>
                 </a>
                 <div class="hero-note">Free to watch • Educational presentation • No obligation</div>
-            </div>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-            <div class="hero-glow">
-                <div class="hero-silhouette">
-                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="60" cy="50" r="28" stroke="currentColor" strokeWidth="0.5" fill="none" opacity="0.5"/>
-                        <path d="M30 80 Q35 60 50 55 Q60 52 70 55 Q85 60 90 80" stroke="currentColor" strokeWidth="0.5" fill="none" opacity="0.4"/>
-                        <circle cx="48" cy="44" r="3" stroke="currentColor" strokeWidth="0.4" fill="none" opacity="0.3"/>
-                        <circle cx="72" cy="44" r="3" stroke="currentColor" strokeWidth="0.4" fill="none" opacity="0.3"/>
-                        <path d="M52 60 Q60 66 68 60" stroke="currentColor" strokeWidth="0.5" fill="none" opacity="0.3"/>
-                        <circle cx="60" cy="35" r="18" stroke="currentColor" strokeWidth="0.3" fill="none" opacity="0.2" strokeDasharray="2 4"/>
-                    </svg>
-                </div>
-                <div class="hero-particles">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
             </div>
         </div>
     </div>
